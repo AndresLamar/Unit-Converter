@@ -145,8 +145,12 @@ class UnitConverter
 
     include_once 'head.php';
     ?>
-    <p>Result of your calculation</p>
+    <div class="result_container">
+        <p class="result">Result of your calculation</p>
 
-    <p><?php echo $result; ?></p>
+        <p class="result"><?php echo $result; ?></p>
+
+        <a href="index.php" class="back_button">Back</a>
+    </div>
 
 <?php endif; ?>

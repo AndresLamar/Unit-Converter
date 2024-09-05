@@ -3,10 +3,12 @@ include_once 'head.php';
 ?>
 
 <form method="POST" action="process.php?conversion=length">
-    <label for="value">
-        <span>Enter the quantity to convert</span>
-        <input type="text" id="value" name="value">
-    </label>
+    <div class="form-group">
+        <label for="value">
+            <span>Enter the quantity to convert</span>
+            <input type="text" id="value" name="value">
+        </label>
+    </div>
 
     <div class="form-group">
         <label for="unit-from">Unit to convert from</label>

@@ -1,3 +1,8 @@
+:root {
+  --primary-color: rgb(20, 55, 250);
+  --secondary-color: rgb(19, 38, 212);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +21,6 @@ main {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100vh;
   border-radius: 10px;
   box-shadow: -2px 4px 10px -4px rgba(117, 113, 117, 0.8);
@@ -26,14 +30,16 @@ main {
 }
 
 h1 {
+  text-align: center;
   margin-top: 20px;
+  color: var(--primary-color);
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 
   & a {
     text-decoration: none;
@@ -44,27 +50,97 @@ nav {
   }
 
   & a.active {
-    border-bottom: 2px solid rgb(19, 60, 197);
+    border-bottom: 2px solid var(--primary-color);
   }
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  gap: 20px;
+  margin-top: 10px;
+  gap: 15px;
+  padding: 10px 20px;
+
+  & input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
 
   & label {
+    width: 100%;
     font-weight: 400;
+    display: flex;
+    flex-direction: column;
   }
 
   & label + select {
-    align-self: flex-end;
+    /* align-self: flex-end; */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
+
+  & button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  & button:hover {
+    background-color: var(--secondary-color);
   }
 }
 
 .form-group {
   display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.result_container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px; /* Espacio entre el label y el select */
+  justify-content: center;
+  margin-top: 20px;
+
+  & .result {
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  & .back_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
 }
