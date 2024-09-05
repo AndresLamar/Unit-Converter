@@ -6,7 +6,7 @@ include_once 'head.php';
 <form method="POST" action="process.php?conversion=temperature">
     <label for="value">
         <span>Enter the quantity to convert</span>
-        <input type="text" id="value" name="value">
+        <input type="number" id="value" name="value" required>
     </label>
 
     <div class="form-group">
